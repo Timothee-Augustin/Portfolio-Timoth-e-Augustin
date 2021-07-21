@@ -1,6 +1,7 @@
 require('dotenv').config();
 
 const express = require('express');
+const cors = require('cors');
 const connection = require('./db-config');
 
 const app = express();
@@ -15,6 +16,7 @@ connection.connect((err) => {
   }
 });
 
+app.use(cors());
 app.use(express.json());
 
 app.use('/uploads', express.static('pictures'));
