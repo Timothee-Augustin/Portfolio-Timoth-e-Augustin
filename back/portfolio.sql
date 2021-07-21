@@ -13,7 +13,7 @@ create table admin(
 create table project(
   id int NOT NULL AUTO_INCREMENT,
   name varchar(100) NOT NULL,
-  date date NOT NULL,
+  date text NOT NULL,
   description text,
   picture1 varchar(100) NOT NULL,
   picture2 varchar(100),
@@ -57,4 +57,4 @@ create table project_client(
 
 insert into project (name, date, description, picture1, link)
   values 
-    ('Reims Quizz', '2021-03-01', '1er projet à la Wild', 'image à insérer', 'https://github.com/Timothee-Augustin/Projet-Quiz');
+    ('Reims Quizz', 'mars 2021', '1er projet à la Wild', 'Quizz1.PNG', 'https://github.com/Timothee-Augustin/Projet-Quiz');
