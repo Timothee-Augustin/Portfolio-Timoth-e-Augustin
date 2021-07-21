@@ -17,12 +17,11 @@ connection.connect((err) => {
 
 app.use(express.json());
 
-app.use('/uploads', express.static('uploads'));
-app.use('/assets', express.static('assets'));
+app.use('/uploads', express.static('pictures'));
 
-// const routes = require('./routes');
+const routes = require('./routes');
 
-// app.use(routes);
+app.use(routes);
 
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
