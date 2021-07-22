@@ -55,9 +55,10 @@ create table project_client(
     REFERENCES client(id)
 );
 
-insert into project (name, date, description, picture1, link)
+insert into project (name, date, description, picture1, picture2 link)
   values 
-    ('Reims Quizz', 'mars 2021', '1er projet à la Wild', 'Quizz1.PNG', 'https://github.com/Timothee-Augustin/Projet-Quiz');
+    ('Reims Quizz', 'mars 2021', '1er projet à la Wild', 'Quizz1.Png', 'Quizz2.png' 'https://github.com/Timothee-Augustin/Projet-Quiz');
+    
 
 insert into client (name)
   values 
@@ -66,3 +67,18 @@ insert into client (name)
 insert into project_client (project_id, client_id)
   values 
     (1, 1);
+
+insert into techno (name)
+  values
+    ('HTML'),
+    ('CSS'),
+    ('Javascript'),
+    ('ReactJS'),
+    ('NodeJS'),
+    ('MySQL');
+
+insert into project_techno (project_id, techno_id)
+  values
+    (1, 1),
+    (1, 2),
+    (1, 3);
