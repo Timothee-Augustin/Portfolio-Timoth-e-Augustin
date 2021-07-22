@@ -7,13 +7,13 @@ routes.post('/', (req, res) => {
 
 const projectRoutes = require('./projects');
 const uploadRoute = require('./upload');
-// const technologyRoutes = require('./technologies');
+const technoRoute = require('./technos');
 // const clientRoutes = require('./clients');
 // const adminRoutes = require('./admin');
 
 routes.use('/projects', projectRoutes);
 routes.use('/upload', uploadRoute);
-// routes.use('/technologies', technologyRoutes);
+routes.use('/technos', technoRoute);
 // routes.use('/clients', clientRoutes);
 // routes.use('/admin', adminRoute);
 
