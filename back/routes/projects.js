@@ -3,7 +3,7 @@ const connection = require('../db-config');
 
 projectRoutes.get('/', (req, res) => {
   connection.query(
-    'SELECT * FROM project',
+    'SELECT project.name as project_name, date, description, picture1, picture2, link, client.name as client_name FROM project INNER JOIN project_client on project.id = project_client.project_id INNER JOIN client on project_client.client_id = client.id',
     (err, results) => {
       if (err) {
         res.status(500).send('Error retrieving the projects from database');

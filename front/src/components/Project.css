@@ -1,0 +1,20 @@
+.project-content{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin-bottom: 3rem;
+}
+
+.text-container{
+  text-align: center;
+}
+
+.picture-container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.picture {
+  max-height: 30vh;
+  width: auto;
+}

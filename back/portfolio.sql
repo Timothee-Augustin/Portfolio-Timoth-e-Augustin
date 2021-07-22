@@ -58,3 +58,11 @@ create table project_client(
 insert into project (name, date, description, picture1, link)
   values 
     ('Reims Quizz', 'mars 2021', '1er projet à la Wild', 'Quizz1.PNG', 'https://github.com/Timothee-Augustin/Projet-Quiz');
+
+insert into client (name)
+  values 
+    ('Wild Code School');
+
+insert into project_client (project_id, client_id)
+  values 
+    (1, 1);

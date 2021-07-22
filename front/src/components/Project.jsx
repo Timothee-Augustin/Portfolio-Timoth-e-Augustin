@@ -1,28 +1,39 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './Project.css';
 
 function Project({ project }) {
   return (
-    <div className="projectCard">
-      <h2>{project.name}</h2>
-      <h2>{project.date}</h2>
-      <p>{project.description}</p>
-      <a href={project.link}>{project.link}</a>
-      <img className="picture1" src={`${process.env.REACT_APP_API_URL}/uploads/${project.picture1}`} alt={project.picture1} />
-
-    </div>
+    <>
+      <div className="project-content">
+        <div className="text-container">
+          <h2>{project.project_name}</h2>
+          <h2>{project.date}</h2>
+          <h2>{project.client_name}</h2>
+          <p>{project.description}</p>
+          <a href={project.link}>Lien github</a>
+        </div>
+        <div className="picture-container">
+          <img className="picture" src={`${process.env.REACT_APP_API_URL}/uploads/${project.picture1}`} alt={project.picture1} />
+          {project.picture2 && (
+          <img className="picture" src={`${process.env.REACT_APP_API_URL}/uploads/${project.picture2}`} alt={project.picture2} />
+          )}
+        </div>
+      </div>
+    </>
   );
 }
 
 Project.propTypes = {
   project: PropTypes.shape({
     id: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
+    project_name: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,
     description: PropTypes.string,
     picture1: PropTypes.string.isRequired,
     picture2: PropTypes.string,
     link: PropTypes.string.isRequired,
+    client_name: PropTypes.string.isRequired,
   }),
 };
 
