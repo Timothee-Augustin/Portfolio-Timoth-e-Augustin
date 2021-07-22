@@ -1,8 +1,12 @@
 import React from 'react';
+import ClientLister from '../components/ClientLister';
 
 function Clients() {
   return (
-    <h1>Hello from Clients</h1>
+    <>
+      <h1>Clients</h1>
+      <ClientLister />
+    </>
   );
 }
 

@@ -12,7 +12,7 @@ function Project({ project }) {
   }, []);
   return (
     <>
-      <div className="project-content">
+      <div id={project.project_name} className="project-content">
         <div className="text-container">
           <h2>{project.project_name}</h2>
           <h2>{project.date}</h2>
