@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 
@@ -15,7 +16,7 @@ function Client({ client }) {
       {clientProjectList && clientProjectList.map(
         (clientProject) => (
           <>
-            <a href={`/projects#${clientProject.project_name}`}>{clientProject.project_name}</a>
+            <Link to={`/projects#${clientProject.project_name}`}>{clientProject.project_name}</Link>
             <br />
           </>
         ),
