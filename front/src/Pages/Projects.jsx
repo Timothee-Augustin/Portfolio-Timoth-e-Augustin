@@ -1,8 +1,9 @@
 import React from 'react';
+import './Projects.css';
 
 function Projects() {
   return (
-    <h1>Hello from projects</h1>
+    <h1>Mes projets</h1>
   );
 }
 
