@@ -8,13 +8,13 @@ routes.post('/', (req, res) => {
 const projectRoutes = require('./projects');
 const uploadRoute = require('./upload');
 const technoRoute = require('./technos');
-// const clientRoutes = require('./clients');
+const clientRoutes = require('./clients');
 // const adminRoutes = require('./admin');
 
 routes.use('/projects', projectRoutes);
 routes.use('/upload', uploadRoute);
 routes.use('/technos', technoRoute);
-// routes.use('/clients', clientRoutes);
+routes.use('/clients', clientRoutes);
 // routes.use('/admin', adminRoute);
 
 module.exports = routes;
