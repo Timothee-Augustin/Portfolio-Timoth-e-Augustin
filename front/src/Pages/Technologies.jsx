@@ -1,8 +1,12 @@
 import React from 'react';
+import TechnoLister from '../components/TechnoLister';
 
 function Technologies() {
   return (
-    <h1>Hello from technologies</h1>
+    <>
+      <h1>Technologies utilisées</h1>
+      <TechnoLister />
+    </>
   );
 }
 
