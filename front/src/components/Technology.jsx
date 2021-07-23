@@ -14,7 +14,7 @@ function Technology({ techno }) {
   return (
     <div className="text-container">
       <h2>{techno.name}</h2>
-      <img className="picture" src={`${process.env.REACT_APP_API_URL}/uploads/logojs.png`} alt="logo" />
+      <img className="picture" src={`${process.env.REACT_APP_API_URL}/uploads/${techno.logo}`} alt="logo" />
       {technoProjectList && technoProjectList.map(
         (technoProject) => (
           <>
@@ -31,6 +31,7 @@ Technology.propTypes = {
   techno: PropTypes.shape({
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
+    logo: PropTypes.string.isRequired,
   }),
 };
 
