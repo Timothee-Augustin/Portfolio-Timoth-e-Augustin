@@ -14,7 +14,7 @@ function Technology({ techno }) {
   return (
     <div className="text-container">
       <h2>{techno.name}</h2>
-      <img className="picture" src={`${process.env.REACT_APP_API_URL}/uploads/${techno.logo}`} alt="logo" />
+      <img className="logo" src={`${process.env.REACT_APP_API_URL}/uploads/${techno.logo}`} alt="logo" />
       {technoProjectList && technoProjectList.map(
         (technoProject) => (
           <>
