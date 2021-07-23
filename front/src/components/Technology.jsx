@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { HashLink } from 'react-router-hash-link';
 import PropTypes from 'prop-types';
 import axios from 'axios';
+import './Technology.css';
 
 function Technology({ techno }) {
   const [technoProjectList, setTechnoProjectList] = useState([]);
@@ -11,8 +12,9 @@ function Technology({ techno }) {
       .then((response) => setTechnoProjectList(response.data));
   }, []);
   return (
-    <div className="techno-content">
+    <div className="text-container">
       <h2>{techno.name}</h2>
+      <img className="picture" src={`${process.env.REACT_APP_API_URL}/uploads/logojs.png`} alt="logo" />
       {technoProjectList && technoProjectList.map(
         (technoProject) => (
           <>

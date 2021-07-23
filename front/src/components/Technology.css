@@ -1,0 +1,18 @@
+h2{
+  margin: 0.5rem;
+}
+
+img{
+  max-width: 4rem;
+}
+
+.techno-content{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3rem;
+}
+
+.text-container{
+  display: flex;
+  flex-direction: column;
+}
