@@ -9,10 +9,17 @@ h2{
 .techno-content{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 3rem;
+  grid-gap: 5rem;
 }
 
 .text-container{
   display: flex;
   flex-direction: column;
+}
+
+.title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
 }
