@@ -24,6 +24,7 @@ create table project(
 create table techno(
   id int NOT NULL AUTO_INCREMENT,
   name varchar(100) NOT NULL,
+  logo varchar(100) NOT NULL,
   PRIMARY KEY (id)
 );
 
@@ -55,9 +56,10 @@ create table project_client(
     REFERENCES client(id)
 );
 
-insert into project (name, date, description, picture1, picture2 link)
+insert into project (name, date, description, picture1, picture2, link)
   values 
-    ('Reims Quizz', 'mars 2021', '1er projet à la Wild', 'Quizz1.Png', 'Quizz2.png' 'https://github.com/Timothee-Augustin/Projet-Quiz');
+    ('Reims Quizz', 'mars 2021', '1er projet à la Wild', 'Quizz1.Png', 'Quizz2.png', 'https://github.com/Timothee-Augustin/Projet-Quiz'),
+    ('Insomniac - Battle Of Heroes', 'juin 2021', 'Second projet à la Wild', 'Insomniac1.Png', 'Insomniac2.png', 'https://github.com/WildCodeSchool/reims-js-2103-project2-insomniac-battle-of-heroes');
     
 
 insert into client (name)
@@ -66,19 +68,25 @@ insert into client (name)
 
 insert into project_client (project_id, client_id)
   values 
-    (1, 1);
+    (1, 1),
+    (2, 1);
 
-insert into techno (name)
+insert into techno (name, logo)
   values
-    ('HTML'),
-    ('CSS'),
-    ('Javascript'),
-    ('ReactJS'),
-    ('NodeJS'),
-    ('MySQL');
+    ('HTML', 'logoHtml.png'),
+    ('CSS', 'logoCss.png'),
+    ('Javascript', 'logoJs.png'),
+    ('ReactJS', 'logoReact.png'),
+    ('NodeJS', 'logoNode.png'),
+    ('MySQL', 'logoMysql.png');
 
 insert into project_techno (project_id, techno_id)
   values
     (1, 1),
     (1, 2),
-    (1, 3);
+    (1, 3),
+    (2, 1),
+    (2, 2),
+    (2, 4),
+    (2, 5);
+    

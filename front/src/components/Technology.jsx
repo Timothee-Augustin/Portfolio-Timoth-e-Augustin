@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { HashLink } from 'react-router-hash-link';
 import PropTypes from 'prop-types';
 import axios from 'axios';
+import './Technology.css';
 
 function Technology({ techno }) {
   const [technoProjectList, setTechnoProjectList] = useState([]);
@@ -11,8 +12,11 @@ function Technology({ techno }) {
       .then((response) => setTechnoProjectList(response.data));
   }, []);
   return (
-    <div className="techno-content">
-      <h2>{techno.name}</h2>
+    <div className="text-container">
+      <div className="title">
+        <img className="logo" src={`${process.env.REACT_APP_API_URL}/uploads/${techno.logo}`} alt="logo" />
+        <h2>{techno.name}</h2>
+      </div>
       {technoProjectList && technoProjectList.map(
         (technoProject) => (
           <>
@@ -29,6 +33,7 @@ Technology.propTypes = {
   techno: PropTypes.shape({
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
+    logo: PropTypes.string.isRequired,
   }),
 };
 

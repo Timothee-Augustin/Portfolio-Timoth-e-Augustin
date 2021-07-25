@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Technology from './Technology';
+import './Technology.css';
 
 function TechnoLister() {
   const [technoList, setTechnoList] = useState([]);
@@ -9,9 +10,9 @@ function TechnoLister() {
     axios.get(url).then((response) => setTechnoList(response.data));
   }, []);
   return (
-    <>
+    <div className="techno-content">
       {technoList && technoList.map((techno) => <Technology key={techno.id} techno={techno} />)}
-    </>
+    </div>
   );
 }
 
